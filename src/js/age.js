@@ -22,3 +22,8 @@ Age.prototype.mars = function(){
   let marsAge = this.userAge * 1.88;
   return marsAge;
 }
+
+Age.prototype.jupiter = function(){
+  let jupiterAge = this.userAge * 11.86;
+  return jupiterAge;
+}
