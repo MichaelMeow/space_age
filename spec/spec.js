@@ -22,4 +22,9 @@ describe('Age', function() {
     expect(michaelsAge.mars()).toEqual(32*1.88);
   });
 
+  it('it should test whether age is returned in Jupiter years', function() {
+    let michaelsAge = new Age(32);
+    expect(michaelsAge.jupiter()).toEqual(32*11.86);
+  });
+
 });

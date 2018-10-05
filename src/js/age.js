@@ -18,7 +18,7 @@ Age.prototype.venus = function(){
   return venusAge;
 }
 
-Age.prototype.venus = function(){
-  let venusAge = this.userAge * .62;
-  return venusAge;
+Age.prototype.mars = function(){
+  let marsAge = this.userAge * 1.88;
+  return marsAge;
 }
