@@ -27,4 +27,9 @@ describe('Age', function() {
     expect(michaelsAge.jupiter()).toEqual(32*11.86);
   });
 
+  it('it should test whether expected age is returned in all planet years', function() {
+    let michaelsAge = new Age(32);
+    expect(michaelsAge.expected()).toEqual([40*.24,40*.62,40*1.88,40*11.86]);
+  });
+
 });
