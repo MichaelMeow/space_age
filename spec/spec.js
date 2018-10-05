@@ -10,5 +10,11 @@ describe('Age', function() {
   it('it should test whether age is returned in Mercury years', function() {
     let michaelsAge = new Age(32);
     expect(michaelsAge.mercury()).toEqual(32*.24);
-  })
+  });
+
+  it('it should test whether age is returned in Venus years', function() {
+    let michaelsAge = new Age(32);
+    expect(michaelsAge.venus()).toEqual(32*.62);
+  });
+
 });
