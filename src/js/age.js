@@ -30,9 +30,9 @@ Age.prototype.jupiter = function(){
 
 Age.prototype.expected = function(){
   let expectedAgeRatio = (72-this.userAge)/this.userAge;
-  let expectedMercury = this.mercury * expectedAgeRatio
-  let expectedVenus = this.venus * expectedAgeRatio
-  let expectedMars = this.mars * expectedAgeRatio
-  let expectedJupiter = this.jupiter * expectedAgeRatio
+  let expectedMercury = this.mercury() * expectedAgeRatio;
+  let expectedVenus = this.venus() * expectedAgeRatio;
+  let expectedMars = this.mars() * expectedAgeRatio;
+  let expectedJupiter = this.jupiter() * expectedAgeRatio;
   return [expectedMercury, expectedVenus, expectedMars, expectedJupiter];
 }
