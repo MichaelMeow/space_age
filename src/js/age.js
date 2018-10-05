@@ -9,35 +9,38 @@ Age.prototype.output = function(){
 }
 
 Age.prototype.mercury = function(){
-  let mercuryAge = this.userAge * .24;
+  const mercuryRate = .24;
+  let mercuryAge = this.userAge * mercuryRate;
   return mercuryAge;
 }
 
 Age.prototype.venus = function(){
-  let venusAge = this.userAge * .62;
+  const venusRate = .62;
+  let venusAge = this.userAge * venusRate;
   return venusAge;
 }
 
 Age.prototype.mars = function(){
-  let marsAge = this.userAge * 1.88;
+  const marsRate = 1.88;
+  let marsAge = this.userAge * marsRate;
   return marsAge;
 }
 
 Age.prototype.jupiter = function(){
-  let jupiterAge = this.userAge * 11.86;
+  const jupiterRate = 11.86;
+  let jupiterAge = this.userAge * jupiterRate;
   return jupiterAge;
 }
 
 Age.prototype.expected = function(){
-  let expectedAgeRatio = (72-this.userAge)/this.userAge;
-  if (expectedAgeRatio < 0) {
-    expectedAgeRatio = -expectedAgeRatio
-  }
+  const expectedAge = 72;
+  let expectedAgeRatio = (expectedAge-this.userAge)/this.userAge;
+  expectedAgeRatio = Math.abs(expectedAgeRatio);
   let expectedMercury = this.mercury() * expectedAgeRatio;
   let expectedVenus = this.venus() * expectedAgeRatio;
   let expectedMars = this.mars() * expectedAgeRatio;
   let expectedJupiter = this.jupiter() * expectedAgeRatio;
 
-
+  // precision, string, and float designed to get rid of float error
   return [parseFloat(expectedMercury.toPrecision(12).toString()), parseFloat(expectedVenus.toPrecision(12).toString()), parseFloat(expectedMars.toPrecision(12).toString()), parseFloat(expectedJupiter.toPrecision(12).toString())];
 }
