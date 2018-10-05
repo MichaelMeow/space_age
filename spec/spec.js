@@ -1,8 +1,9 @@
-import { Object } from './../src/js/object.js';
+import { Age } from './../src/js/age.js';
 
-describe('', function() {
+describe('Age', function() {
 
-  it('', function() {
-    expect().toEqual()
+  it('should test whether age input is returned as an output', function() {
+    let michaelsAge = new Age(32);
+    expect(michaelsAge.output()).toEqual("32");
   });
 });
