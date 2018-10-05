@@ -17,4 +17,9 @@ describe('Age', function() {
     expect(michaelsAge.venus()).toEqual(32*.62);
   });
 
+  it('it should test whether age is returned in Mars years', function() {
+    let michaelsAge = new Age(32);
+    expect(michaelsAge.mars()).toEqual(32*1.88);
+  });
+
 });
