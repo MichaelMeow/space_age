@@ -5,5 +5,5 @@ export function Age(userAge) {
 
 
   Age.prototype.output = function(){
-    
+    return this.userAge;
   }
