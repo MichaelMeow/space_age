@@ -6,7 +6,7 @@
 
 ## Description
 
-A space age age calculator, designed for an age where age is relative to space and time.
+A space age age calculator, calculating age for an age where age is relative to space and time.
 
 ## Behavior Specifications
 
@@ -36,7 +36,7 @@ A space age age calculator, designed for an age where age is relative to space a
 
 - An input of an age over 72 returns how much above life expectancy you have lived on each planet.
 	input: 75
-  output: you have live 3*.24 mercury years over life expectancy.
+  output: you have lived 3*.24 mercury years over life expectancy.
 
 ## Setup/Installation Requirements
 
@@ -45,9 +45,9 @@ A space age age calculator, designed for an age where age is relative to space a
 ```
 $ npm install
 ```
-* Run "npm run start" to open dev server.
+* Run "npm test" to open jasmine and view that the tests are met.
 ```
-$ npm run start
+$ npm test
 ```
 
 ## Known Bugs

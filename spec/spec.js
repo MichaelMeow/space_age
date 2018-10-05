@@ -34,9 +34,9 @@ describe('Age', function() {
 
   it('it should test whether expected age is returned as years lived over life expectancy if age is over 72', function() {
     let testAge = Math.abs(-2);
-    let michaelsAge = new Age(74);
+    let dadsAge = new Age(74);
 
-    expect(michaelsAge.expected()).toEqual([testAge*.24,testAge*.62,testAge*1.88,testAge*11.86]);
+    expect(dadsAge.expected()).toEqual([testAge*.24,testAge*.62,testAge*1.88,testAge*11.86]);
   });
 
 });
