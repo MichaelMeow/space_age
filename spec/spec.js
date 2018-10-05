@@ -29,12 +29,14 @@ describe('Age', function() {
 
   it('it should test whether expected age is returned in all planet years', function() {
     let michaelsAge = new Age(32);
-    expect(michaelsAge.expected()).toEqual([40*.24,40*.62,40*1.88,40*11.86]);
+    expect(michaelsAge.expected()).toEqual([40*.24,40*.62,75.2,40*11.86]);
   });
 
   it('it should test whether expected age is returned as years lived over life expectancy if age is over 72', function() {
+    let testAge = Math.abs(-2);
     let michaelsAge = new Age(74);
-    expect(michaelsAge.expected()).toEqual([2*.24,2*.62,2*1.88,2*11.86]);
+
+    expect(michaelsAge.expected()).toEqual([testAge*.24,testAge*.62,testAge*1.88,testAge*11.86]);
   });
 
 });

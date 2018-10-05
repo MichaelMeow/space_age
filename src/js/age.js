@@ -30,9 +30,14 @@ Age.prototype.jupiter = function(){
 
 Age.prototype.expected = function(){
   let expectedAgeRatio = (72-this.userAge)/this.userAge;
+  if (expectedAgeRatio < 0) {
+    expectedAgeRatio = -expectedAgeRatio
+  }
   let expectedMercury = this.mercury() * expectedAgeRatio;
   let expectedVenus = this.venus() * expectedAgeRatio;
   let expectedMars = this.mars() * expectedAgeRatio;
   let expectedJupiter = this.jupiter() * expectedAgeRatio;
-  return [expectedMercury, expectedVenus, expectedMars, expectedJupiter];
+
+
+  return [parseFloat(expectedMercury.toPrecision(12).toString()), parseFloat(expectedVenus.toPrecision(12).toString()), parseFloat(expectedMars.toPrecision(12).toString()), parseFloat(expectedJupiter.toPrecision(12).toString())];
 }
